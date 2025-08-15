@@ -30,7 +30,7 @@ contract OurTokenTest is StdCheats, Test {
         ourToken.transfer(bob, STARTING_BALANCE);
     }
 
-    function testInitialSupply() view public {
+    function testInitialSupply() public view {
         assertEq(ourToken.totalSupply(), deployer.INITIAL_SUPPLY());
     }
 
